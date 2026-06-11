@@ -70,9 +70,12 @@ List<Order> ex2=orders.stream()
         System.out.println("\nesercizio 3");
         ex3.forEach(System.out::println);
         List<Order> ex4 = orders.stream()
-                .filter(order -> order.getCustomer().getTier() == 2)
-                .filter(order -> order.getOrderDate().isAfter(LocalDate.of(2021, 2, 1))
-                        && order.getOrderDate().isBefore(LocalDate.of(2021, 4, 1)))
+                .filter(order ->
+                order.getCustomer().getTier() == 2 &&
+                        order.getOrderDate().isAfter(LocalDate.of(2021, 2, 1)) &&
+                        order.getOrderDate().isBefore(LocalDate.of(2021, 4, 1))
+        )
+
                 .toList();
 
         System.out.println("\nesercizio 3");
